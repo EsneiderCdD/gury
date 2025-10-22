@@ -1,5 +1,6 @@
 import HeroHome from './components/HeroHome'
 import AboutSection from './components/AboutSection'
+import ProposalSection from './components/ProposalSection'
 function App() {
 
 
@@ -7,6 +8,7 @@ function App() {
     <>
     <HeroHome />
     <AboutSection />
+    <ProposalSection />
     </>
   )
 }
