@@ -134,27 +134,27 @@ function MapaDelBarrio() {
         {/* 🔹 Tarjetas de estadísticas (reubicadas debajo del mapa) */}
         <div className="row g-3 mb-5 justify-content-center">
           {reportes.map((reporte, index) => (
-            <div key={index} className="col-lg-3 col-md-4 col-sm-6">
-              <div
-                className="card bg-light bg-opacity-10 border-0 text-center shadow-sm"
-                style={{
-                  borderRadius: "0.75rem",
-                  transition: "transform 0.3s ease",
-                }}
-              >
-                <div className="card-body py-3 px-3">
+            <div key={index} className="col-lg-2 col-md-3 col-sm-6 text-center">
+              <div className="d-flex flex-column align-items-center">
+                <div
+                  className="bg-light bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center mb-3"
+                  style={{
+                    width: "70px",
+                    height: "70px",
+                    boxShadow: "0 0 10px rgba(255, 255, 255, 0.1)",
+                  }}
+                >
                   <img
                     src={reporte.icon}
                     alt={reporte.tipo}
-                    className="mb-2"
-                    style={{ width: "36px", height: "36px", objectFit: "contain" }}
+                    style={{ width: "40px", height: "40px", objectFit: "contain" }}
                   />
-                  <h4 className={`fw-bold text-${reporte.color} mb-1 fs-5`}>
-                    {reporte.cantidad}
-                  </h4>
-                  <h6 className="text-white fw-semibold mb-1 small">{reporte.tipo}</h6>
-                  <p className="text-white-50 mb-0" style={{ fontSize: "0.75rem" }}>{reporte.descripcion}</p>
                 </div>
+                <h4 className={`fw-bold text-${reporte.color} mb-1 fs-5`}>
+                  {reporte.cantidad}
+                </h4>
+                <h6 className="text-white fw-semibold mb-1 small">{reporte.tipo}</h6>
+                <p className="text-white-50 mb-0" style={{ fontSize: "0.75rem" }}>{reporte.descripcion}</p>
               </div>
             </div>
           ))}
