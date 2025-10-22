@@ -2,6 +2,7 @@ import HeroHome from './components/HeroHome'
 import AboutSection from './components/AboutSection'
 import ProposalSection from './components/ProposalSection'
 import CallToActionSection from './components/CallToActionSection'
+import MovimientoDelBate from './components/MovimientoDelBate'
 function App() {
 
 
@@ -11,6 +12,7 @@ function App() {
     <AboutSection />
     <ProposalSection />
     <CallToActionSection />
+    <MovimientoDelBate />
     </>
   )
 }
