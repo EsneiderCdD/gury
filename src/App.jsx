@@ -19,8 +19,8 @@ function App() {
     <CallToActionSection />
     <MovimientoDelBate />
     <MapaDelBarrio />
-    <CalendarioBateYBarrio />
     <FormularioSumate />
+    <CalendarioBateYBarrio />
     <Footer />
     </>
   )
