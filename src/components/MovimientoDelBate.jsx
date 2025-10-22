@@ -2,96 +2,62 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function MovimientoDelBate() {
-  const tarjetas = [
-    {
-      icon: "⚖️",
-      title: "Juego limpio",
-      description: "Reglas claras, licitaciones abiertas, cero trampa.",
-    },
-    {
-      icon: "🏙️",
-      title: "Medellín primero",
-      description: "El defensor de Medellín.",
-    },
-    {
-      icon: "📢",
-      title: "Verdad sin filtro",
-      description: "Denuncias con pruebas, sin tibieza.",
-    },
-  ];
-
   return (
-    <section
-      className="py-5 text-white position-relative"
-      style={{
-        backgroundImage:
-          "url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Metrocablemed.jpg')", // Fondo urbano de Medellín
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div
-        className="position-absolute top-0 start-0 w-100 h-100"
-        style={{
-          background:
-            "linear-gradient(to bottom right, rgba(0,0,0,0.75), rgba(0,0,0,0.55))",
-          backdropFilter: "blur(2px)",
-        }}
-      ></div>
-
-      <div className="container position-relative py-5">
-        {/* Título y subtítulo */}
-        <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold text-uppercase mb-3">
-            Movimiento del Bate — <span className="text-primary">Juego limpio, ciudad firme</span>
-          </h2>
-          <p
-            className="lead text-white-50 mx-auto"
-            style={{ maxWidth: "800px" }}
-          >
-            Bateamos las protestas con violencia y defendemos nuestra ciudad con carácter.
+    <section className="container py-5">
+      <div className="row align-items-center g-5">
+        {/* Columna Izquierda: Texto */}
+        <div className="col-12 col-md-6">
+          <span className="badge bg-warning text-dark fw-semibold mb-3">
+            Activismo Real, Cambio Verdadero
+          </span>
+          <h1 className="display-4 fw-bold mb-4 lh-sm">
+            Construyendo la Medellín que Soñamos
+          </h1>
+          <p className="text-secondary mb-4 fs-5">
+            Comprometidos con la transformación de Medellín a través de la
+            participación ciudadana y la defensa de los derechos de todos los
+            habitantes.
           </p>
 
-          {/* Botones CTA */}
-          <div className="d-flex flex-column flex-md-row gap-3 justify-content-center mt-4">
-            <a href="#sumate" className="btn btn-primary btn-lg px-5 py-3 shadow">
-              Súmate
+          <div className="d-flex flex-column flex-sm-row gap-3">
+            <a href="#sumate" className="btn btn-dark btn-lg px-4 shadow-sm">
+              Únete al Movimiento
             </a>
             <a
-              href="#denuncia"
-              className="btn btn-outline-light btn-lg px-5 py-3 shadow"
+              href="#voluntariado"
+              className="btn btn-outline-dark btn-lg px-4 shadow-sm"
             >
-              Denuncia con evidencias
+              Voluntariado
             </a>
           </div>
         </div>
 
-        {/* Tarjetas */}
-        <div className="row g-4 mt-5">
-          {tarjetas.map((tarjeta, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
-              <div
-                className="card h-100 text-center border-0 text-white shadow-lg bg-transparent"
-                style={{
-                  backdropFilter: "blur(8px)",
-                  background: "rgba(255,255,255,0.1)",
-                  borderRadius: "1.5rem",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                <div className="card-body p-5">
-                  <div
-                    className="fs-1 mb-3"
-                    style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
-                  >
-                    {tarjeta.icon}
-                  </div>
-                  <h3 className="h4 fw-bold mb-3">{tarjeta.title}</h3>
-                  <p className="text-white-50 mb-0">{tarjeta.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Columna Derecha: Imagen */}
+        <div className="col-12 col-md-6 text-center">
+          <div className="position-relative d-inline-block">
+            <div
+              className="position-absolute top-0 start-0 translate-middle rounded-4"
+              style={{
+                width: "100%",
+                height: "100%",
+                background:
+                  "linear-gradient(135deg, rgba(255, 192, 203, 0.3), rgba(147,112,219,0.2))",
+                zIndex: 0,
+                borderRadius: "2rem",
+              }}
+            ></div>
+
+            <img
+              src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+              alt="Líder comunitario"
+              className="img-fluid rounded-4 shadow-lg position-relative"
+              style={{
+                maxHeight: "480px",
+                objectFit: "cover",
+                zIndex: 1,
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

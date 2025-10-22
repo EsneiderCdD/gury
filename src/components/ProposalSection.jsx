@@ -63,12 +63,6 @@ function ProposalsSection() {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-5">
-          <button className="btn btn-primary btn-lg shadow">
-            Lee todas mis propuestas
-          </button>
-        </div>
       </div>
     </section>
   );
