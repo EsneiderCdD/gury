@@ -99,6 +99,7 @@ function FormularioSumate() {
               src="https://i.pinimg.com/736x/71/c7/38/71c73885a553b88daaa55a3b307ca28a.jpg"
               alt="Ciudadanos en Medellín"
               className="img-fluid rounded shadow"
+              style={{ maxHeight: '500px', objectFit: 'cover', width: '100%' }}
             />
             <div className="mt-4">
               <h4 className="fw-bold text-white">Tu voz transforma Medellín</h4>

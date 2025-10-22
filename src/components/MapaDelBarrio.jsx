@@ -24,14 +24,14 @@ function MapaDelBarrio() {
         </div>
 
         {/* Contenedor principal: mapa + panel lateral */}
-        <div className="row g-4 align-items-stretch">
+        <div className="row g-4 align-items-stretch justify-content-center px-lg-5">
           {/* Columna del mapa */}
-          <div className="col-lg-9">
+          <div className="col-lg-8 col-md-8">
             <div
               className="ratio ratio-16x9 rounded shadow overflow-hidden"
               style={{
                 height: "100%",
-                minHeight: "450px",
+                minHeight: "400px",
               }}
             >
               <iframe
@@ -46,7 +46,7 @@ function MapaDelBarrio() {
           </div>
 
           {/* Columna lateral con indicadores */}
-          <div className="col-lg-3">
+          <div className="col-lg-4 col-md-4">
             <div className="d-flex flex-column h-100 justify-content-between">
               {reportes.map((reporte, index) => (
                 <div
