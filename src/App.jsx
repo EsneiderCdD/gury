@@ -3,6 +3,7 @@ import AboutSection from './components/AboutSection'
 import ProposalSection from './components/ProposalSection'
 import CallToActionSection from './components/CallToActionSection'
 import MovimientoDelBate from './components/MovimientoDelBate'
+import MapaDelBarrio from './components/MapaDelBarrio'
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
     <ProposalSection />
     <CallToActionSection />
     <MovimientoDelBate />
+    <MapaDelBarrio />
     </>
   )
 }
