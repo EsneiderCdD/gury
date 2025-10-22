@@ -4,6 +4,8 @@ import ProposalSection from './components/ProposalSection'
 import CallToActionSection from './components/CallToActionSection'
 import MovimientoDelBate from './components/MovimientoDelBate'
 import MapaDelBarrio from './components/MapaDelBarrio'
+import CalendarioBateYBarrio from './components/CalendarioBateYBarrio'
+import FormularioSumate from './components/FormularioSumate'
 function App() {
 
 
@@ -15,6 +17,8 @@ function App() {
     <CallToActionSection />
     <MovimientoDelBate />
     <MapaDelBarrio />
+    <CalendarioBateYBarrio />
+    <FormularioSumate />
     </>
   )
 }
