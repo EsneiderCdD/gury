@@ -10,7 +10,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="py-5 mt-5">
+    <footer className="py-5 mt-5" style={{ backgroundColor: "rgba(20, 20, 20, 0.6)" }}>
       <div className="container text-white-50">
         <div className="row gy-4">
           {/* Columna 1: Descripción */}

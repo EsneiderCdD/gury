@@ -45,7 +45,7 @@ function CalendarioBateYBarrio() {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: "#0a0a0a" }}>
+    <section className="py-5">
       <div className="container">
         {/* Título */}
         <div className="text-center mb-5">
