@@ -17,7 +17,7 @@ function AboutSection() {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: "#0a0a0a" }}>
+    <section className="py-5">
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Columna izquierda - Imagen */}
