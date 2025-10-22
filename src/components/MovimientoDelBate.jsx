@@ -21,10 +21,10 @@ function MovimientoDelBate() {
     <section className="py-5">
       <div className="container py-5">
         <div className="text-center mb-5">
-          <h2 className="display-4 fw-bold mb-3">
+          <h2 className="display-4 fw-bold text-white mb-3">
             Movimiento del Bate — Juego limpio, ciudad firme
           </h2>
-          <p className="lead text-secondary mx-auto" style={{ maxWidth: '800px' }}>
+          <p className="lead text-white-50 mx-auto" style={{ maxWidth: '800px' }}>
             Bateamos las protestas con violencia y defendemos nuestra ciudad con carácter.
           </p>
 
@@ -41,10 +41,10 @@ function MovimientoDelBate() {
         <div className="row g-4 mt-5">
           {tarjetas.map((tarjeta, index) => (
             <div key={index} className="col-lg-4 col-md-6">
-              <div className="text-center h-100 p-4 bg-light rounded">
+              <div className="text-center h-100 p-4 bg-dark bg-opacity-25 rounded">
                 <div className="fs-1 mb-3">{tarjeta.icon}</div>
-                <h3 className="h4 mb-3">{tarjeta.title}</h3>
-                <p className="text-secondary">{tarjeta.description}</p>
+                <h3 className="h4 text-white mb-3">{tarjeta.title}</h3>
+                <p className="text-white-50">{tarjeta.description}</p>
               </div>
             </div>
           ))}
