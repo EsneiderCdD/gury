@@ -9,12 +9,24 @@ function MovimientoDelBate() {
         <div className="row align-items-center g-5">
           {/* Columna Izquierda: Texto */}
           <div className="col-12 col-md-6">
-            <span className="badge bg-primary text-white fw-semibold mb-3 px-3 py-2">
-              Activismo Real, Cambio Verdadero
-            </span>
             <h1 className="display-5 fw-bold text-white mb-4 lh-sm">
               Construyendo la Medellín que Soñamos
             </h1>
+            
+            <div className="d-flex flex-wrap gap-2 mb-4">
+              <span className="badge text-white fw-semibold px-3 py-2 rounded-pill" style={{ backgroundColor: "#1e3a8a" }}>
+              Transformación
+              </span>
+              <span className="badge text-dark fw-semibold px-3 py-2 rounded-pill" style={{ backgroundColor: "#38bdf8" }}>
+                Participación
+              </span>
+              <span className="badge text-dark fw-semibold px-3 py-2 rounded-pill" style={{ backgroundColor: "#fbbf24" }}>
+                Activismo
+              </span>
+              <span className="badge text-white fw-semibold px-3 py-2 rounded-pill" style={{ backgroundColor: "#dc2626" }}>
+                Acción
+              </span>
+            </div>
             <p className="text-white-50 mb-4 fs-5">
               Comprometidos con la transformación de Medellín a través de la
               participación ciudadana y la defensa de los derechos de todos los

@@ -31,9 +31,7 @@ function MapaDelBarrio() {
       <div className="container position-relative">
         {/* Título y descripción */}
         <div className="text-center mb-5">
-          <span className="badge bg-primary text-white fw-semibold mb-3 px-3 py-2">
-            Participación Ciudadana
-          </span>
+    
           <h2 className="display-5 fw-bold mb-3">Mapa del Barrio</h2>
           <p className="text-white-50 mx-auto" style={{ maxWidth: "650px" }}>
             Visualiza en tiempo real las denuncias, reportes y soluciones
