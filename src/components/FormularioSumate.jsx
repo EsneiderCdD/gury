@@ -3,20 +3,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function FormularioSumate() {
   return (
-    <section className="py-5 bg-light" id="sumate">
+    <section className="py-5" id="sumate">
       <div className="container">
         {/* 🔹 Caja unificada con sombra y bordes redondeados */}
         <div
-          className="row g-0 shadow-lg overflow-hidden rounded-4 bg-white"
+          className="row g-0 shadow-lg overflow-hidden rounded-4"
           style={{
             minHeight: "550px",
+            backgroundColor: "rgba(30, 30, 30, 0.7)",
           }}
         >
           {/* Columna izquierda - Formulario */}
           <div className="col-lg-6 p-5 d-flex flex-column justify-content-center">
             <div className="mb-4">
-              <h2 className="fw-bold text-dark mb-3">Súmate al Movimiento</h2>
-              <p className="text-secondary" style={{ maxWidth: "550px" }}>
+              <h2 className="fw-bold text-white mb-3">Súmate al Movimiento</h2>
+              <p className="text-white-50" style={{ maxWidth: "550px" }}>
                 Únete a nuestra causa y ayuda a construir la Medellín que todos soñamos. 
                 Juntos somos más fuertes.
               </p>
@@ -25,7 +26,7 @@ function FormularioSumate() {
             <form>
               <div className="row g-3">
                 <div className="col-md-6">
-                  <label htmlFor="nombre" className="form-label text-muted">
+                  <label htmlFor="nombre" className="form-label text-white-50">
                     Nombre completo
                   </label>
                   <input
@@ -38,7 +39,7 @@ function FormularioSumate() {
                 </div>
 
                 <div className="col-md-6">
-                  <label htmlFor="whatsapp" className="form-label text-muted">
+                  <label htmlFor="whatsapp" className="form-label text-white-50">
                     WhatsApp
                   </label>
                   <input
@@ -51,7 +52,7 @@ function FormularioSumate() {
                 </div>
 
                 <div className="col-md-6">
-                  <label htmlFor="barrio" className="form-label text-muted">
+                  <label htmlFor="barrio" className="form-label text-white-50">
                     Barrio
                   </label>
                   <input
@@ -64,7 +65,7 @@ function FormularioSumate() {
                 </div>
 
                 <div className="col-md-6">
-                  <label htmlFor="rol" className="form-label text-muted">
+                  <label htmlFor="rol" className="form-label text-white-50">
                     ¿Cómo quieres apoyar?
                   </label>
                   <select
@@ -82,7 +83,7 @@ function FormularioSumate() {
                 </div>
 
                 <div className="col-12">
-                  <label htmlFor="mensaje" className="form-label text-muted">
+                  <label htmlFor="mensaje" className="form-label text-white-50">
                     Mensaje (opcional)
                   </label>
                   <textarea

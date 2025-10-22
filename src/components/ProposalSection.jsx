@@ -33,7 +33,7 @@ function ProposalsSection() {
   ];
 
   return (
-    <section className="py-5 text-white">
+    <section className="py-5 text-white w-100" style={{ backgroundColor: "rgba(20, 20, 20, 0.6)" }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="display-5 fw-bold mb-3">Propuestas para Medellín</h2>

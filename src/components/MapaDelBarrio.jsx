@@ -134,28 +134,28 @@ function MapaDelBarrio() {
         </div>
 
         {/* 🔹 Tarjetas de estadísticas (reubicadas debajo del mapa) */}
-        <div className="row g-4 mb-5">
+        <div className="row g-3 mb-5 justify-content-center">
           {reportes.map((reporte, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
+            <div key={index} className="col-lg-3 col-md-4 col-sm-6">
               <div
-                className="card bg-light bg-opacity-10 border-0 text-center h-100 shadow-sm"
+                className="card bg-light bg-opacity-10 border-0 text-center shadow-sm"
                 style={{
-                  borderRadius: "1rem",
+                  borderRadius: "0.75rem",
                   transition: "transform 0.3s ease",
                 }}
               >
-                <div className="card-body py-4">
+                <div className="card-body py-3 px-3">
                   <img
                     src={reporte.icon}
                     alt={reporte.tipo}
-                    className="mb-3"
-                    style={{ width: "60px", height: "60px", objectFit: "contain" }}
+                    className="mb-2"
+                    style={{ width: "36px", height: "36px", objectFit: "contain" }}
                   />
-                  <h3 className={`fw-bold text-${reporte.color} mb-1`}>
+                  <h4 className={`fw-bold text-${reporte.color} mb-1 fs-5`}>
                     {reporte.cantidad}
-                  </h3>
-                  <h5 className="text-white fw-semibold mb-2">{reporte.tipo}</h5>
-                  <p className="text-white-50 small mb-0">{reporte.descripcion}</p>
+                  </h4>
+                  <h6 className="text-white fw-semibold mb-1 small">{reporte.tipo}</h6>
+                  <p className="text-white-50 mb-0" style={{ fontSize: "0.75rem" }}>{reporte.descripcion}</p>
                 </div>
               </div>
             </div>
