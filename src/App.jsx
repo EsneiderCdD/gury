@@ -6,6 +6,8 @@ import MovimientoDelBate from './components/MovimientoDelBate'
 import MapaDelBarrio from './components/MapaDelBarrio'
 import CalendarioBateYBarrio from './components/CalendarioBateYBarrio'
 import FormularioSumate from './components/FormularioSumate'
+import Footer from './components/Footer'
+
 function App() {
 
 
@@ -19,6 +21,7 @@ function App() {
     <MapaDelBarrio />
     <CalendarioBateYBarrio />
     <FormularioSumate />
+    <Footer />
     </>
   )
 }
