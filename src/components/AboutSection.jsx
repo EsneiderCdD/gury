@@ -1,4 +1,5 @@
 import React from "react";
+import elgury from "../assets/images/elgury.webp";
 
 function AboutSection() {
   const puntos = [
@@ -24,15 +25,16 @@ function AboutSection() {
           <div className="col-lg-6">
             <div className="position-relative">
               <img
-                src="/src/assets/images/Hero.png"
+                src={elgury}
                 alt="Gury"
-                className="img-fluid rounded shadow"
+                className="img-fluid rounded shadow mx-auto d-block"
                 style={{
                   filter: "brightness(0.9)",
-                  width: "100%",
+                  width: "65%",
                   height: "auto",
                 }}
               />
+
             </div>
           </div>
 
