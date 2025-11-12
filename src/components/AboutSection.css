@@ -1,9 +1,8 @@
 /* Fondo de la sección About: imagen alineada a la izquierda y más "alejada" */
 .about-section {
   background-image: url('../assets/images/gury.webp');
-  background-repeat: repeat;
-  background-position:  center;
-  /* Hacemos la imagen más pequeña para simular "alejar la cámara" */
+  background-repeat: no-repeat;
+  background-position: 60px center;
   background-size: 75%;
 }
 
@@ -26,4 +25,9 @@
 .about-section-icon-img {
   width: 40px;
   height: 40px;
+}
+
+.about-section-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
 }

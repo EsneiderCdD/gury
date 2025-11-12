@@ -4,15 +4,15 @@ import "./AboutSection.css";
 function AboutSection() {
   const puntos = [
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // 👔 experiencia
+      icon: "https://cdn-icons-png.flaticon.com/128/10562/10562868.png", // 🏛️ concejo/gobierno
       texto: "Experiencia en el Concejo de Medellín.",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/684/684908.png", // 🎤 vocero
+      icon: "https://cdn-icons-png.flaticon.com/128/7152/7152226.png", // 📣 vocero/megáfono
       texto: "Vocero de causas ciudadanas sin filtro.",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135789.png", // 🚀 líder joven
+      icon: "https://cdn-icons-png.flaticon.com/512/814/814513.png", // 💡 visión de futuro
       texto: "Líder joven con visión de futuro.",
     },
   ];
@@ -28,7 +28,7 @@ function AboutSection() {
 
           {/* Columna derecha - Texto + iconos */}
           <div className="col-lg-6 text-center text-lg-start">
-            <h2 className="display-5 fw-bold text-white mb-4">¿Quién soy?</h2>
+            <h2 className="display-5 fw-bold text-white mb-4 about-section-title">El Gury</h2>
             <p className="text-white-50 mb-5">
               Soy un líder comprometido con Medellín, dedicado a representar las voces
               que necesitan ser escuchadas. Mi trabajo se basa en la transparencia,
