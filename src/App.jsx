@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProposalsDashboard from './pages/ProposalsDashboard'
 import ProposalDetail from './pages/ProposalDetail'
+import Navbar from './components/Navbar'
 
 function Home() {
   return (
@@ -30,6 +31,7 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/propuestas" element={<ProposalsDashboard />} />

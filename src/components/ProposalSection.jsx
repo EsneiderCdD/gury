@@ -14,11 +14,6 @@ function ProposalsSection() {
           <p className="text-white-50 mx-auto" style={{ maxWidth: "700px" }}>
             Trabajamos en soluciones reales que transforman nuestra ciudad. Estas son algunas de las propuestas que impulsan el desarrollo y bienestar de todos los ciudadanos.
           </p>
-          <div className="mt-3">
-            <Link to="/propuestas" className="btn btn-outline-light btn-sm">
-              Conocer todas las propuestas
-            </Link>
-          </div>
         </div>
 
         <div className="row g-4">
@@ -41,6 +36,11 @@ function ProposalsSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-4 mb-0 proposals-section-cta">
+          <Link to="/propuestas" className="btn btn-outline-light btn-lg proposals-section-cta-btn">
+            Conocer todas las propuestas
+          </Link>
         </div>
       </div>
     </section>
