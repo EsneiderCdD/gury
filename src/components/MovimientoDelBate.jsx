@@ -20,7 +20,7 @@ function MovimientoDelBate() {
         "¡Construyamos, soñemos y levantemos el país juntos! ",
       actions: [
         { label: "Únete al Movimiento", href: "#sumate", variant: "primary" },
-        { label: "Voluntariado", href: "#voluntariado", variant: "outline" },
+       
       ],
     },
     {
@@ -31,7 +31,7 @@ function MovimientoDelBate() {
         "Fortalecemos juntas y juntas los mecanismos de participación para que la voz del barrio llegue a decisiones reales.",
       manifest: "Juntos decidimos, juntos construimos.",
       actions: [
-        { label: "Voluntariado", href: "#voluntariado", variant: "outline" },
+      
       ],
     },
     {
