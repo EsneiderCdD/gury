@@ -1,3 +1,102 @@
 .mapa-del-barrio-section {
   background-color: rgba(20, 20, 20, 0.4);
 }
+
+/* Escenario integrado */
+.mapa-stage {
+  position: relative;
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mapa-panel {
+  align-self: center;
+  max-width: 640px;
+  padding: 2rem 2rem 2.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+}
+
+.mapa-steps { margin-bottom: 0.5rem; }
+.mapa-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.mapa-step-badge {
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 700;
+}
+
+.mapa-cta { width: 100%; }
+
+.mapa-visual {
+  position: relative;
+  align-self: center;
+}
+.mapa-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.15), rgba(13, 110, 253, 0.25));
+  transform: rotate(-1deg);
+  top: 15px;
+  left: 15px;
+  z-index: 0;
+  border-radius: 1rem;
+}
+.mapa-frame { min-height: 360px; z-index: 1; border-radius: 1rem; }
+
+/* Chips de estadísticas */
+.mapa-chips {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+.mapa-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(4px);
+}
+.mapa-chip-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+}
+.mapa-chip-icon img { width: 22px; height: 22px; object-fit: contain; }
+.mapa-chip-content { display: flex; flex-direction: column; line-height: 1; }
+.mapa-chip-content strong { font-size: 1rem; }
+.mapa-chip-content span { font-size: 0.8rem; }
+
+/* Footer textual */
+.mapa-footer { margin-top: 1rem; }
+
+/* Responsividad */
+@media (max-width: 992px) {
+  .mapa-stage { grid-template-columns: 1fr; }
+  .mapa-panel { order: 1; }
+  .mapa-visual { order: 2; }
+}

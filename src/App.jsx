@@ -4,13 +4,15 @@ import ProposalSection from './components/ProposalSection'
 import CallToActionSection from './components/CallToActionSection'
 import MovimientoDelBate from './components/MovimientoDelBate'
 import MapaDelBarrio from './components/MapaDelBarrio'
-import CalendarioBateYBarrio from './components/CalendarioBateYBarrio'
-import FormularioSumate from './components/FormularioSumate'
+// FormularioSumate se moverá a su propia página
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProposalsDashboard from './pages/ProposalsDashboard'
 import ProposalDetail from './pages/ProposalDetail'
 import Navbar from './components/Navbar'
+import Sumate from './pages/Sumate'
+import Denuncia from './pages/Denuncia'
+import Calendario from './pages/Calendario'
 
 function Home() {
   return (
@@ -21,8 +23,6 @@ function Home() {
       <CallToActionSection />
       <MovimientoDelBate />
       <MapaDelBarrio />
-      <FormularioSumate />
-      <CalendarioBateYBarrio />
       <Footer />
     </>
   )
@@ -36,6 +36,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/propuestas" element={<ProposalsDashboard />} />
         <Route path="/propuestas/:slug" element={<ProposalDetail />} />
+        <Route path="/sumate" element={<Sumate />} />
+        <Route path="/denuncia" element={<Denuncia />} />
+        <Route path="/calendario" element={<Calendario />} />
       </Routes>
     </BrowserRouter>
   )

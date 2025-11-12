@@ -19,8 +19,7 @@ function MovimientoDelBate() {
       manifest:
         "¡Construyamos, soñemos y levantemos el país juntos! ",
       actions: [
-        { label: "Únete al Movimiento", href: "#sumate", variant: "primary" },
-       
+        { label: "Únete al Movimiento", href: "/sumate", variant: "primary" },
       ],
     },
     {
@@ -49,7 +48,7 @@ function MovimientoDelBate() {
       description:
         "Conectamos personas, organizaciones y recursos para que la ayuda llegue donde más se necesita.",
       actions: [
-        { label: "Únete al Movimiento", href: "#sumate", variant: "primary" },
+        { label: "Eventos/Calendario", href: "/calendario", variant: "primary" },
       ],
     },
   ];

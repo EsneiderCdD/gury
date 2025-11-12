@@ -53,7 +53,10 @@ function AboutSection() {
               ))}
             </div>
 
-            <button className="btn btn-primary btn-lg">Conoce mi historia</button>
+            <div className="d-flex gap-3 justify-content-center justify-content-lg-start">
+              <button className="btn btn-primary btn-lg">Conoce mi historia</button>
+              <a href="/calendario" className="btn btn-outline-light btn-lg">Eventos/Calendario</a>
+            </div>
           </div>
         </div>
       </div>

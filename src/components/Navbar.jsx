@@ -26,10 +26,13 @@ function Navbar() {
               <Link className="nav-link" to="/propuestas">Propuestas</Link>
             </li>
             <li className="nav-item">
-              <span className="nav-link disabled">Movimiento Bate</span>
+              <Link className="nav-link" to="/sumate">Súmate</Link>
             </li>
             <li className="nav-item">
-              <span className="nav-link disabled">Denuncia Ciudadana</span>
+              <Link className="nav-link" to="/denuncia">Denuncia Ciudadana</Link>
+            </li>
+             <li className="nav-item">
+              <Link className="nav-link" to="/calendario">Calendario</Link>
             </li>
           </ul>
         </div>
