@@ -20,6 +20,19 @@
   filter: brightness(70%);
 }
 
+/* Texto acompaña sutilmente el hover de la imagen */
+.proposal-card-title,
+.proposal-card-text {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.proposal-card:hover .proposal-card-title {
+  transform: translateY(-3px);
+}
+.proposal-card:hover .proposal-card-text {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
 .proposal-card-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
