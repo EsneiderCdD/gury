@@ -1,0 +1,73 @@
+/* Altura y presencia de la sección */
+.mov-bate-section {
+  min-height: 75vh;
+}
+
+/* Contenedor del stack y controles */
+.image-stack-wrapper {
+  width: 100%;
+  max-width: 520px;
+  padding: 1rem 2.5rem; /* espacio para los botones laterales */
+}
+
+.image-stack {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+.stack-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15);
+  filter: brightness(0.9);
+  transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+}
+
+.stack-img.active {
+  box-shadow: 0 28px 60px rgba(13, 110, 253, 0.25);
+  filter: brightness(1);
+}
+
+.stack-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-width: 2px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+.stack-nav-btn-left { left: 0; }
+.stack-nav-btn-right { right: 0; }
+.mov-bate-title {
+  margin-bottom: 2rem;
+  letter-spacing: 0.2px;
+}
+
+.mov-bate-badges {
+  margin-bottom: 1.75rem;
+}
+.mov-bate-badge {
+  font-size: 0.95rem;
+}
+
+.mov-bate-desc {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+.mov-bate-manifest {
+  margin-bottom: 2rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.3px;
+}
+
+.mov-bate-actions {
+  margin-top: 0.25rem;
+  gap: 1rem;
+}
