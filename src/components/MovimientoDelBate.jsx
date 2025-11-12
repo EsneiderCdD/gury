@@ -2,18 +2,62 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import gury from "../assets/images/gury.jpg";
 import "./MovimientoDelBate.css";
+import gury2 from "../assets/images/gury2.png";
+import gury3 from "../assets/images/gury3.png";
+import gury4 from "../assets/images/gury4.png";
+
+
 
 function MovimientoDelBate() {
-  const images = [
-    gury,
-    "https://i.pinimg.com/736x/03/14/2b/03142b0032304db6885ea105a63b5f4e.jpg",
-    "https://i.pinimg.com/736x/fe/3f/ed/fe3fed849eb80f5c3be4b1687b2a7aa3.jpg",
-    "https://i.pinimg.com/736x/e4/0d/6c/e40d6c129b0c583edb9c2368f2dfc747.jpg",
+  const slides = [
+    {
+      image: gury,
+      title: "Construyendo la Medellín que Soñamos",
+      badges: ["Transformación", "Participación", "Activismo", "Acción"],
+      description:
+        "Comprometidos con la transformación de Medellín a través de la participación ciudadana y la defensa de los derechos de todos los habitantes.",
+      manifest:
+        "¡Construyamos, soñemos y levantemos el país juntos! Con voz, acción y comunidad, hacemos realidad la Medellín que merecemos.",
+      actions: [
+        { label: "Únete al Movimiento", href: "#sumate", variant: "primary" },
+        { label: "Voluntariado", href: "#voluntariado", variant: "outline" },
+      ],
+    },
+    {
+      image: gury2,
+      title: "Medellín participa",
+      badges: ["Participación"],
+      description:
+        "Fortalecemos juntas y juntas los mecanismos de participación para que la voz del barrio llegue a decisiones reales.",
+      manifest: "Juntos decidimos, juntos construimos.",
+      actions: [
+        { label: "Voluntariado", href: "#voluntariado", variant: "outline" },
+      ],
+    },
+    {
+      image: gury3,
+      title: "Barrios con futuro",
+      description:
+        "Impulsamos proyectos de desarrollo comunitario con infraestructura y cultura que abran oportunidades.",
+      manifest: "El futuro se construye desde la cuadra.",
+      actions: [],
+    },
+    {
+      image: gury4,
+      title: "Red de apoyo ciudadano",
+      badges: ["Acción"],
+      description:
+        "Conectamos personas, organizaciones y recursos para que la ayuda llegue donde más se necesita.",
+      actions: [
+        { label: "Únete al Movimiento", href: "#sumate", variant: "primary" },
+      ],
+    },
   ];
+  const images = slides.map((s) => s.image);
   const [current, setCurrent] = useState(0);
 
-  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
-  const next = () => setCurrent((c) => (c + 1) % images.length);
+  const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
+  const next = () => setCurrent((c) => (c + 1) % slides.length);
 
   return (
     <section className="py-5 mov-bate-section">
@@ -22,43 +66,44 @@ function MovimientoDelBate() {
           {/* Columna Izquierda: Texto */}
           <div className="col-12 col-md-6">
             <h1 className="display-5 fw-bold text-white lh-sm mov-bate-title">
-              Construyendo la Medellín que Soñamos
+              {slides[current].title}
             </h1>
             
-            <div className="d-flex flex-wrap gap-2 mov-bate-badges">
-              <span className="badge text-white fw-semibold px-3 py-2 rounded-pill mov-bate-badge" style={{ backgroundColor: "#1e3a8a" }}>
-              Transformación
-              </span>
-              <span className="badge text-dark fw-semibold px-3 py-2 rounded-pill mov-bate-badge" style={{ backgroundColor: "#38bdf8" }}>
-                Participación
-              </span>
-              <span className="badge text-dark fw-semibold px-3 py-2 rounded-pill mov-bate-badge" style={{ backgroundColor: "#fbbf24" }}>
-                Activismo
-              </span>
-              <span className="badge text-white fw-semibold px-3 py-2 rounded-pill mov-bate-badge" style={{ backgroundColor: "#dc2626" }}>
-                Acción
-              </span>
-            </div>
+            {slides[current].badges && slides[current].badges.length > 0 && (
+              <div className="d-flex flex-wrap gap-2 mov-bate-badges">
+                {slides[current].badges.map((b, i) => (
+                  <span
+                    key={i}
+                    className="badge fw-semibold px-3 py-2 rounded-pill mov-bate-badge"
+                    style={{ backgroundColor: i % 2 === 0 ? "#1e3a8a" : "#38bdf8", color: i % 2 === 0 ? "#fff" : "#111" }}
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+            )}
             <p className="text-white-50 fs-5 mov-bate-desc">
-              Comprometidos con la transformación de Medellín a través de la
-              participación ciudadana y la defensa de los derechos de todos los
-              habitantes.
+              {slides[current].description}
             </p>
-            <p className="text-white fw-semibold fs-5 mov-bate-manifest">
-              ¡Construyamos, soñemos y levantemos el país juntos! 
-            </p>
+            {slides[current].manifest && (
+              <p className="text-white fw-semibold fs-5 mov-bate-manifest">
+                {slides[current].manifest}
+              </p>
+            )}
 
-            <div className="d-flex flex-column flex-sm-row gap-3 mov-bate-actions">
-              <a href="#sumate" className="btn btn-primary btn-lg px-4 shadow-sm">
-                Únete al Movimiento
-              </a>
-              
-                <a href="#voluntariado"
-                className="btn btn-outline-light btn-lg px-4 shadow-sm"
-              >
-                Voluntariado
-              </a>
-            </div>
+            {slides[current].actions && slides[current].actions.length > 0 && (
+              <div className="d-flex flex-column flex-sm-row gap-3 mov-bate-actions">
+                {slides[current].actions.map((a, i) => (
+                  <a
+                    key={i}
+                    href={a.href}
+                    className={`btn ${a.variant === "primary" ? "btn-primary" : "btn-outline-light"} btn-lg px-4 shadow-sm`}
+                  >
+                    {a.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Columna Derecha: Stack de imágenes con controles */}
