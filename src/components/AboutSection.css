@@ -1,5 +1,6 @@
 /* Fondo de la sección About: imagen alineada a la izquierda y más "alejada" */
 .about-section {
+  background-color: rgba(20, 20, 20, 0.6);
   background-image: url('../assets/images/gury.webp');
   background-repeat: no-repeat;
   background-position: 60px center;

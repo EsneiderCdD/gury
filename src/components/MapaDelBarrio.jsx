@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./MapaDelBarrio.css";
 
 function MapaDelBarrio() {
   const reportes = [
@@ -27,7 +28,7 @@ function MapaDelBarrio() {
   ];
 
   return (
-    <section className="py-5 bg-dark text-white position-relative">
+    <section className="py-5 mapa-del-barrio-section text-white position-relative">
       <div className="container position-relative">
         {/* Título y descripción */}
         <div className="text-center mb-5">

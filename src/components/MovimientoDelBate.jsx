@@ -17,7 +17,7 @@ function MovimientoDelBate() {
       description:
         "Comprometidos con la transformación de Medellín a través de la participación ciudadana y la defensa de los derechos de todos los habitantes.",
       manifest:
-        "¡Construyamos, soñemos y levantemos el país juntos! Con voz, acción y comunidad, hacemos realidad la Medellín que merecemos.",
+        "¡Construyamos, soñemos y levantemos el país juntos! ",
       actions: [
         { label: "Únete al Movimiento", href: "#sumate", variant: "primary" },
         { label: "Voluntariado", href: "#voluntariado", variant: "outline" },
@@ -58,6 +58,14 @@ function MovimientoDelBate() {
 
   const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
   const next = () => setCurrent((c) => (c + 1) % slides.length);
+
+  // Posiciones y rotaciones fijas para efecto "collage"
+  const placements = [
+    { x: -30, y: -10, rotate: -6, scale: 0.92 },
+    { x: 20, y: -5, rotate: 5, scale: 0.9 },
+    { x: -10, y: 18, rotate: -3, scale: 0.88 },
+    { x: 28, y: 14, rotate: 8, scale: 0.86 },
+  ];
 
   return (
     <section className="py-5 mov-bate-section">
@@ -119,12 +127,9 @@ function MovimientoDelBate() {
               </button>
               <div className="image-stack">
                 {images.map((src, i) => {
-                  const offset = i - current;
-                  const rotation = offset * 4; // leve rotación por posición
-                  const translateY = offset * 12; // efecto de profundidad
-                  const scale = 1 - Math.min(Math.abs(offset) * 0.06, 0.18);
-                  const zIndex = images.length - Math.abs(offset);
+                  const place = placements[i % placements.length];
                   const active = i === current;
+                  const zIndex = active ? 100 : 10 + i; // activa al frente sin mover
                   return (
                     <img
                       key={i}
@@ -132,7 +137,7 @@ function MovimientoDelBate() {
                       alt={`Movimiento ${i + 1}`}
                       className={`stack-img ${active ? "active" : ""}`}
                       style={{
-                        transform: `translateX(-50%) translateY(${translateY}px) rotate(${rotation}deg) scale(${scale})`,
+                        transform: `translate(-50%, 0) translate(${place.x}px, ${place.y}px) rotate(${place.rotate}deg) scale(${place.scale})`,
                         zIndex,
                       }}
                     />

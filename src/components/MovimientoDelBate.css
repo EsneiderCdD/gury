@@ -1,6 +1,8 @@
 /* Altura y presencia de la sección */
 .mov-bate-section {
-  min-height: 75vh;
+  height: auto;
+  background-color: rgba(20, 20, 20, 0.4);
+
 }
 
 /* Contenedor del stack y controles */
