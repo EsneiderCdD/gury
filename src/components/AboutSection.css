@@ -6,13 +6,6 @@
   background-size: 75%;
 }
 
-/* Ajustes responsive básicos (opcional) */
-@media (max-width: 992px) {
-  .about-section {
-    background-position: center top;
-    background-size: 80%;
-  }
-}
 
 /* Círculo de íconos */
 .about-section-icons-circle {

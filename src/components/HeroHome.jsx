@@ -23,10 +23,10 @@ function HeroHome() {
         <div className="container position-relative z-1 text-center py-5">
           <h1 className="display-3 fw-bold mb-3">Medellín Hermosa</h1>
           <p className="lead mb-4">La ciudad de la eterna primavera te espera</p>
-          <div className="d-flex gap-3 justify-content-center flex-wrap">
+          {/* <div className="d-flex gap-3 justify-content-center flex-wrap">
             <button className="btn btn-primary btn-lg px-4">Explorar</button>
             <button className="btn btn-outline-light btn-lg px-4">Conocer más</button>
-          </div>
+          </div> */}
         </div>
       </div>
     );

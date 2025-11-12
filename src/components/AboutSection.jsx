@@ -28,8 +28,8 @@ function AboutSection() {
 
           {/* Columna derecha - Texto + iconos */}
           <div className="col-lg-6 text-center text-lg-start">
-            <h2 className="display-5 fw-bold text-white mb-4 about-section-title">El Gury</h2>
-            <p className="text-white-50 mb-5">
+            <h2 className="display-5 fw-bold text-white mb-4 about-section-title text-leff">El Gury</h2>
+            <p className="text-white-50 mb-5" style={{ textAlign: "justify" }}>
               Soy un líder comprometido con Medellín, dedicado a representar las voces
               que necesitan ser escuchadas. Mi trabajo se basa en la transparencia,
               el diálogo directo con la ciudadanía y la búsqueda constante de soluciones
@@ -53,7 +53,7 @@ function AboutSection() {
               ))}
             </div>
 
-            <button className="btn btn-primary btn-lg">Conoce mi historia</button>
+            <button className="btn btn-primary btn-lg ">Conoce mi historia</button>
           </div>
         </div>
       </div>
