@@ -1,5 +1,5 @@
 import React from "react";
-import elgury from "../assets/images/elgury.webp";
+import "./AboutSection.css";
 
 function AboutSection() {
   const puntos = [
@@ -18,24 +18,12 @@ function AboutSection() {
   ];
 
   return (
-    <section className="py-5">
+    <section className="py-5 about-section">
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Columna izquierda - Imagen */}
           <div className="col-lg-6">
-            <div className="position-relative">
-              <img
-                src={elgury}
-                alt="Gury"
-                className="img-fluid rounded shadow mx-auto d-block"
-                style={{
-                  filter: "brightness(0.9)",
-                  width: "65%",
-                  height: "auto",
-                }}
-              />
-
-            </div>
+            <div className="position-relative"></div>
           </div>
 
           {/* Columna derecha - Texto + iconos */}
@@ -56,20 +44,9 @@ function AboutSection() {
                   className="col-12 col-md-4 text-center text-lg-start"
                 >
                   <div className="d-flex flex-column align-items-center align-items-lg-start">
-                    <div
-                      className="bg-light bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center mb-3"
-                      style={{
-                        width: "70px",
-                        height: "70px",
-                        boxShadow: "0 0 10px rgba(255, 255, 255, 0.1)",
-                      }}
-                    >
-                      <img
-                        src={punto.icon}
-                        alt="icono"
-                        style={{ width: "40px", height: "40px" }}
-                      />
-                    </div>
+                    <div className="bg-light bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center mb-3 about-section-icons-circle">
+                      <img src={punto.icon} alt="icono" className="about-section-icon-img" />
+                      </div>
                     <p className="text-white small mb-0">{punto.texto}</p>
                   </div>
                 </div>

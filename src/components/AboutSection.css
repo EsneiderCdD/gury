@@ -1,0 +1,29 @@
+/* Fondo de la sección About: imagen alineada a la izquierda y más "alejada" */
+.about-section {
+  background-image: url('../assets/images/gury.webp');
+  background-repeat: repeat;
+  background-position:  center;
+  /* Hacemos la imagen más pequeña para simular "alejar la cámara" */
+  background-size: 75%;
+}
+
+/* Ajustes responsive básicos (opcional) */
+@media (max-width: 992px) {
+  .about-section {
+    background-position: center top;
+    background-size: 80%;
+  }
+}
+
+/* Círculo de íconos */
+.about-section-icons-circle {
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen de ícono */
+.about-section-icon-img {
+  width: 40px;
+  height: 40px;
+}
