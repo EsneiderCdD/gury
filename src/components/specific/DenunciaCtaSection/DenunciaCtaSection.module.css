@@ -29,6 +29,7 @@
 
 .tag {
   display: inline-block;
+  font-family: var(--font-oswald);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 3px;
@@ -38,13 +39,14 @@
 }
 
 .title {
-  font-weight: 800;
-  font-size: 44px;
-  line-height: 1.1;
+  font-family: var(--font-anton);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.98;
   text-transform: uppercase;
   color: #FFFFFF;
   margin: 0 0 20px;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
 }
 
 .accent {
@@ -52,7 +54,8 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  font-family: var(--font-barlow);
+  font-size: 19px;
   line-height: 1.6;
   color: #C7D0E0;
   max-width: 600px;
@@ -63,6 +66,7 @@
   display: inline-block;
   background: #E11D2A;
   color: #FFFFFF;
+  font-family: var(--font-oswald);
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 1.5px;
