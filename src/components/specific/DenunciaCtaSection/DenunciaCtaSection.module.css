@@ -1,0 +1,77 @@
+.section {
+  position: relative;
+  background: radial-gradient(1200px 700px at 30% 50%, #16294E 0%, #0C1A33 55%, #081428 100%);
+  padding: 100px 28px;
+  overflow: hidden;
+  border-top: 4px solid #E11D2A;
+  border-bottom: 4px solid #FFD200;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.024) 0px,
+    rgba(255, 255, 255, 0.024) 2px,
+    transparent 2px,
+    transparent 22px
+  );
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFD200;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
+}
+
+.accent {
+  color: #E11D2A;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #C7D0E0;
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: #E11D2A;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 40px;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+  background: #b81822;
+}
