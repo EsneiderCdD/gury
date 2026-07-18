@@ -1,0 +1,153 @@
+.main {
+  background: #F2EEE4;
+  min-height: 100vh;
+}
+
+.section {
+  padding: 104px 28px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.imageCol {
+  position: sticky;
+  top: 104px;
+}
+
+.imagePlaceholder {
+  aspect-ratio: 3 / 4;
+  background: repeating-linear-gradient(
+    45deg,
+    #0C1A33 0px,
+    #0C1A33 14px,
+    #102146 14px,
+    #102146 28px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageLabel {
+  font-family: var(--font-oswald);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8FA0BF;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.line {
+  width: 34px;
+  height: 3px;
+  background: #E11D2A;
+}
+
+.labelText {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #0C1A33;
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: #15130F;
+  margin: 0;
+}
+
+.accent {
+  color: #E11D2A;
+  display: block;
+}
+
+.role {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #6B6557;
+  margin: 0;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.bio p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4A463E;
+  margin: 0;
+}
+
+.contact {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #E2DCCE;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contactLabel {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6B6557;
+}
+
+.contactLink {
+  font-size: 17px;
+  color: #E11D2A;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCol {
+    position: static;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+}
