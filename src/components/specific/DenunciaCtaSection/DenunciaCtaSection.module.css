@@ -79,3 +79,88 @@
 .ctaBtn:hover {
   background: #b81822;
 }
+
+@media (max-width: 1500px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: 38px;
+  }
+  .subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 750px) {
+  .section {
+    padding: 80px 24px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 64px 20px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .ctaBtn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .section {
+    padding: 48px 16px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .ctaBtn {
+    font-size: 13px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
