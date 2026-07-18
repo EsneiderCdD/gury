@@ -1,0 +1,166 @@
+.section {
+  position: relative;
+  background: radial-gradient(1200px 700px at 30% 50%, #16294E 0%, #0C1A33 55%, #081428 100%);
+  padding: 100px 28px;
+  overflow: hidden;
+  border-top: 4px solid #E11D2A;
+  border-bottom: 4px solid #FFD200;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.024) 0px,
+    rgba(255, 255, 255, 0.024) 2px,
+    transparent 2px,
+    transparent 22px
+  );
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFD200;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 0 20px;
+  letter-spacing: 0.5px;
+}
+
+.accent {
+  color: #E11D2A;
+}
+
+.subtitle {
+  font-family: var(--font-barlow);
+  font-size: 19px;
+  line-height: 1.6;
+  color: #C7D0E0;
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: #E11D2A;
+  color: #FFFFFF;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 40px;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+  background: #b81822;
+}
+
+@media (max-width: 1500px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: 38px;
+  }
+  .subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 750px) {
+  .section {
+    padding: 80px 24px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 64px 20px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .ctaBtn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .section {
+    padding: 48px 16px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .ctaBtn {
+    font-size: 13px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
