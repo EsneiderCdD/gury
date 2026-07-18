@@ -32,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${anton.variable} ${oswald.variable} ${barlow.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="frame">{children}</div>
+      </body>
     </html>
   );
 }
