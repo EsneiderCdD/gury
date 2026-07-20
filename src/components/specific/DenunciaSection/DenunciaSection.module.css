@@ -1,25 +1,11 @@
 .section {
   position: relative;
-  min-height: 100vh;
-  background: radial-gradient(1200px 700px at 78% 20%, #16294E 0%, #0C1A33 55%, #081428 100%);
+  background: #F2EEE4;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 28px;
+  padding: 60px 28px 104px;
   font-family: var(--font-barlow);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.024) 0px,
-    rgba(255, 255, 255, 0.024) 2px,
-    transparent 2px,
-    transparent 22px
-  );
-  pointer-events: none;
 }
 
 .container {
@@ -28,50 +14,10 @@
   width: 100%;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.tag {
-  display: inline-block;
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #FFD200;
-  margin-bottom: 16px;
-}
-
-.title {
-  font-family: var(--font-anton);
-  font-weight: 400;
-  font-size: 56px;
-  line-height: 0.98;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin: 0 0 18px;
-  letter-spacing: 0.5px;
-}
-
-.accent {
-  color: #E11D2A;
-}
-
-.subtitle {
-  font-family: var(--font-barlow);
-  font-size: 19px;
-  line-height: 1.6;
-  color: #C7D0E0;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
 .form {
-  background: rgba(18, 34, 66, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2DCCE;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   padding: 48px;
   display: flex;
   flex-direction: column;
@@ -90,10 +36,10 @@
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #FFD200;
+  color: #E11D2A;
   margin: 0;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #E2DCCE;
 }
 
 .row {
@@ -114,24 +60,24 @@
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #C7D0E0;
+  color: #0C1A33;
 }
 
 .field input,
 .field textarea {
-  background: rgba(12, 26, 51, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #FFFFFF;
+  border: 1px solid #D4CEBE;
   padding: 14px 16px;
   font-family: var(--font-barlow);
   font-size: 16px;
-  color: #FFFFFF;
+  color: #0C1A33;
   outline: none;
   transition: border-color 0.2s;
 }
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #8FA0BF;
+  color: #A09884;
 }
 
 .field input:focus,
@@ -156,7 +102,7 @@
   padding: 18px 34px;
   cursor: pointer;
   transition: background 0.2s;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .submitBtn:hover {

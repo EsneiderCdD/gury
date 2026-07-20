@@ -64,21 +64,8 @@ export default function DenunciaSection() {
   }
 
   return (
-    <section className={styles.section}>
-      <div className={styles.overlay} />
+    <section id="denuncia-form" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.tag}>Denuncia Ciudadana</span>
-          <h1 className={styles.title}>
-            Tu voz <span className={styles.accent}>es la herramienta</span>
-          </h1>
-          <p className={styles.subtitle}>
-            Si fuiste testigo o víctima de un acto de vandalismo, intimidación o
-            violencia en tu comunidad, este es el canal para reportarlo. Tu
-            denuncia nos ayuda a construir el mapa de la verdad.
-          </p>
-        </div>
-
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.block}>
             <h2 className={styles.blockTitle}>Información personal</h2>
@@ -178,7 +165,7 @@ export default function DenunciaSection() {
           </div>
 
           <button type="submit" className={styles.submitBtn} disabled={cargando}>
-            {cargando ? "Enviando..." : "Enviar denuncia"}
+            {cargando ? "Enviando..." : "Presentar denuncia"}
           </button>
         </form>
       </div>

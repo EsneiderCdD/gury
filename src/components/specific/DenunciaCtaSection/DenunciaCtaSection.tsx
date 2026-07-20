@@ -8,7 +8,7 @@ export default function DenunciaCtaSection() {
       accent="vandalismo"
       subtitle="Tu testimonio es clave para construir el mapa de la verdad en nuestra comunidad. Cada denuncia nos ayuda a visibilizar lo que muchos callan."
       ctaText="Presentar denuncia"
-      ctaHref="/denuncia"
+      ctaHref="#denuncia-form"
     />
   )
 }
