@@ -1,0 +1,60 @@
+=======================================================================
+               DOCUMENTACIÓN DE INFRAESTRUCTURA Y DESPLIEGUE
+                            elgury.com.co
+=======================================================================
+
+1. TIPO DE ARQUITECTURA
+-----------------------------------------------------------------------
+Este proyecto utiliza una arquitectura HÍBRIDA dentro de un mismo hosting:
+- Frontend: Una aplicación moderna SPA construida en Next.js.
+- Backend: El CMS WordPress actuando de forma desacoplada (Headless) 
+  para gestionar únicamente la base de datos y la API.
+
+2. ENTIDADES Y RUTAS DEL PROYECTO
+-----------------------------------------------------------------------
+Toda la aplicación convive en el directorio raíz (public_html). Para 
+evitar que los sistemas se interfieran mutuamente, se estructuró así:
+
+[ ] FRONTEND (Next.js):
+    - Sus archivos principales (_next, index.html, 404.html, etc.) 
+      viven sueltos directamente en la raíz de public_html.
+    - Se despliega como una EXPORTACIÓN ESTÁTICA (Static Export).
+
+[ ] BACKEND (WordPress):
+    - El archivo motor de arranque original (index.php) fue renombrado 
+      a "index-wordpress.php" para cederle el control de la página 
+      principal al index.html de Next.js.
+    - El código personalizado que recibe los formularios del backend 
+      se encuentra en el archivo:
+      /wp-content/themes/react-app/functions.php
+
+3. REGLAS DE ENRUTAMIENTO (El archivo .htaccess)
+-----------------------------------------------------------------------
+El servidor cuenta con reglas inteligentes para dirigir el tráfico:
+- Si un usuario entra a la web normal, el servidor le muestra el 
+  frontend de Next.js (index.html).
+- Si el frontend envía una petición que inicia por "/wp-json", el 
+  servidor despierta de inmediato a "index-wordpress.php" para que 
+  procese la API.
+
+⚠️ NOTA IMPORTANTE PARA NUEVOS FEATURES:
+Al crear nuevas pantallas o funciones en Next.js, asegúrate de que todas 
+las peticiones POST/GET apunten rigurosamente al endpoint de la API 
+de WordPress en producción (https://elgury.com.co/wp-json/...). De lo 
+contrario, las solicitudes darán un error 404 al exportar el sitio.
+
+4. FLUJO DE ACTUALIZACIONES (Cómo subir cambios)
+-----------------------------------------------------------------------
+Tú trabajas y haces los cambios visuales únicamente en tu computadora. 
+Cuando termines un feature, el proceso es:
+
+1. Ejecutas la exportación estática en tu terminal local (npm run build).
+2. Entras a la carpeta resultante ("out"), seleccionas todo su 
+   contenido y lo comprimes en un archivo .zip.
+3. Subes ese .zip a la raíz de public_html en Hostinger.
+4. Extraes el contenido seleccionando la opción "Sobrescribir archivos 
+   existentes" (Overwrite).
+
+* NUNCA BORRAR de la raíz: Las carpetas wp-admin, wp-content, 
+  wp-includes, el archivo index-wordpress.php ni el archivo .htaccess.
+=======================================================================
