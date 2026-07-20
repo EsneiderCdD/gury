@@ -1,14 +1,15 @@
-import type { Metadata } from "next"
-import styles from "./page.module.css"
+import SectionHeader from "@/components/reusable/SectionHeader/SectionHeader"
+import styles from "./QuienSoySection.module.css"
 
-export const metadata: Metadata = {
-  title: "Quién Soy | Movimiento del Bate",
-  description: "Conoce a Esneider Cadavid David, concejal del Movimiento del Bate. Defensa legítima, Antioquia de pie.",
-}
-
-export default function QuienSoyPage() {
+export default function QuienSoySection() {
   return (
-    <main className={styles.main}>
+    <div id="quien-soy">
+      <SectionHeader
+        tag="Candidato al Concejo"
+        title="Defiendo lo que es nuestro"
+        accent="es nuestro"
+        subtitle="La seguridad en las calles, el derecho al trabajo y la dignidad de Antioquia. Esa es mi bandera."
+      />
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.imageCol}>
@@ -28,20 +29,20 @@ export default function QuienSoyPage() {
             <p className={styles.role}>Concejal · Movimiento del Bate</p>
             <div className={styles.bio}>
               <p>
-                Hijo del arriero antioqueño. Crecí viendo a mi padre cargar la
-                mula antes de que saliera el sol, y entendí que el trabajo digno
-                no se negocia ni se rinde.
+                Mi trabajo en el concejo nace de una convicción: la política
+                debe estar al servicio de la gente que madruga. Cada decisión
+                busca devolverle la tranquilidad a nuestras calles y la
+                esperanza a nuestras familias.
               </p>
               <p>
-                Hoy sirvo a mi comunidad desde el concejo, convencido de que la
-                verdadera política nace en la calle, en el barrio, en el
-                comerciante que abre su local cada madrugada y en la familia que
-                quiere vivir tranquila.
+                No creo en los discursos vacíos ni en las promesas de
+                escritorio. Creo en el trabajo que se ve, en la presencia en el
+                territorio y en la defensa firme de lo que es nuestro.
               </p>
               <p>
-                No vine a hacer política de escritorio. Vine a defender lo que
-                es nuestro: la seguridad de nuestras calles, el derecho al
-                trabajo y la dignidad de Antioquia.
+                Antioquia merece representantes que no le teman a la verdad.
+                Ese es mi compromiso: decir lo que pienso, hacer lo que digo y
+                defender a los que nadie defiende.
               </p>
             </div>
             <div className={styles.contact}>
@@ -53,6 +54,6 @@ export default function QuienSoyPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

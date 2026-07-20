@@ -1,4 +1,5 @@
 import HeroSection from "@/components/specific/HeroSection/HeroSection"
+import QuienSoySection from "@/components/specific/QuienSoySection/QuienSoySection"
 import DenunciaCtaSection from "@/components/specific/DenunciaCtaSection/DenunciaCtaSection"
 import DenunciaSection from "@/components/specific/DenunciaSection/DenunciaSection"
 import EcommerceHeroSection from "@/components/specific/EcommerceHeroSection/EcommerceHeroSection"
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <QuienSoySection />
       <DenunciaCtaSection />
       <DenunciaSection />
       <EcommerceHeroSection />

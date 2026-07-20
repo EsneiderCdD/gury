@@ -21,7 +21,7 @@ export default function HeroSection() {
           gente. Este es mi compromiso con la comunidad.
         </p>
         <div className={styles.actions}>
-          <Link href="/quien-soy" className={styles.btnPrimary}>
+          <Link href="#quien-soy" className={styles.btnPrimary}>
             Conóceme
           </Link>
           <Link href="/propuestas" className={styles.btnSecondary}>
