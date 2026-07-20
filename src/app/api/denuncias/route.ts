@@ -18,18 +18,13 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const body = await request.json()
+  const formData = await request.formData()
 
-  console.log('📦 Route Handler: datos capturados del formulario →', {
-    cedula: body.cedula,
-    nombre_completo: body.nombre_completo,
-    relato: body.relato?.slice(0, 50) + '...',
-  })
+  console.log('📦 Route Handler: FormData recibido')
 
   const res = await fetch(`${WP_API}/crear`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+    body: formData,
   })
 
   const data = await res.json()

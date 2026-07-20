@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, FormEvent } from "react"
+import { useState, FormEvent, useRef } from "react"
 import styles from "./DenunciaSection.module.css"
 import Modal from "@/components/reusable/Modal/Modal"
 
@@ -18,9 +18,10 @@ export default function DenunciaSection() {
   const [direccion, setDireccion] = useState("")
   const [relato, setRelato] = useState("")
   const [evidencias, setEvidencias] = useState("")
-  const [foto, setFoto] = useState("")
+  const [foto, setFoto] = useState<File | null>(null)
   const [cargando, setCargando] = useState(false)
   const [respuesta, setRespuesta] = useState<RespuestaAPI | null>(null)
+  const fotoRef = useRef<HTMLInputElement>(null)
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -28,19 +29,21 @@ export default function DenunciaSection() {
     setRespuesta(null)
 
     try {
+      const formData = new FormData()
+      formData.append("nombre_completo", nombre)
+      formData.append("cedula", cedula)
+      formData.append("correo", correo)
+      formData.append("celular", celular)
+      formData.append("direccion_lugar", direccion)
+      formData.append("relato", relato)
+      formData.append("evidencias_enlaces", evidencias)
+      if (foto) {
+        formData.append("foto", foto)
+      }
+
       const res = await fetch("/api/denuncias", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nombre_completo: nombre,
-          cedula,
-          correo,
-          celular,
-          direccion_lugar: direccion,
-          relato,
-          evidencias_enlaces: evidencias,
-          foto_enlace: foto,
-        }),
+        body: formData,
       })
 
       const data: RespuestaAPI = await res.json()
@@ -54,7 +57,8 @@ export default function DenunciaSection() {
         setDireccion("")
         setRelato("")
         setEvidencias("")
-        setFoto("")
+        setFoto(null)
+        if (fotoRef.current) fotoRef.current.value = ""
       }
     } catch {
       setRespuesta({ status: "error", message: "Error de red. Intenta de nuevo." })
@@ -152,13 +156,13 @@ export default function DenunciaSection() {
                 />
               </div>
               <div className={styles.field}>
-                <label htmlFor="foto">Foto (enlace)</label>
+                <label htmlFor="foto">Foto</label>
                 <input
+                  ref={fotoRef}
                   id="foto"
-                  type="text"
-                  placeholder="Ej: enlace a imagen"
-                  value={foto}
-                  onChange={(e) => setFoto(e.target.value)}
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => setFoto(e.target.files?.[0] ?? null)}
                 />
               </div>
             </div>
