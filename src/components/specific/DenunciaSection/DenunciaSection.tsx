@@ -41,7 +41,7 @@ export default function DenunciaSection() {
         formData.append("foto", foto)
       }
 
-      const res = await fetch("/api/denuncias", {
+      const res = await fetch("https://elgury.com.co/wp-json/denuncias/v1/crear", {
         method: "POST",
         body: formData,
       })
