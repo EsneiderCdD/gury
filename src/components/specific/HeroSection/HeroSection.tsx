@@ -12,8 +12,8 @@ export default function HeroSection() {
           <span className={styles.labelText}>Movimiento del Bate</span>
         </div>
         <h1 className={styles.title}>
-          Esneider Cadavid
-          <span className={styles.accent}> David</span>
+          Andres Rodriguez
+          <span className={styles.accent}> El Gury</span>
         </h1>
         <p className={styles.role}>Concejal — Defensa Legítima</p>
         <p className={styles.subtitle}>
