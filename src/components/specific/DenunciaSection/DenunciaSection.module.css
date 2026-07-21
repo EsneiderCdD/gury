@@ -75,6 +75,33 @@
   transition: border-color 0.2s;
 }
 
+.fileLabel {
+  display: block;
+  cursor: pointer;
+}
+
+.fileLabel input[type="file"] {
+  display: none;
+}
+
+.fileText {
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid #D4CEBE;
+  padding: 14px 16px;
+  font-family: var(--font-barlow);
+  font-size: 16px;
+  color: #A09884;
+  transition: border-color 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileLabel:hover .fileText {
+  border-color: #E11D2A;
+}
+
 .field input::placeholder,
 .field textarea::placeholder {
   color: #A09884;

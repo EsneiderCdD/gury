@@ -153,17 +153,23 @@ export default function DenunciaSection() {
                   placeholder="Ej: enlace a video, noticia, testimonio"
                   value={evidencias}
                   onChange={(e) => setEvidencias(e.target.value)}
+
                 />
               </div>
               <div className={styles.field}>
                 <label htmlFor="foto">Foto</label>
-                <input
-                  ref={fotoRef}
-                  id="foto"
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => setFoto(e.target.files?.[0] ?? null)}
-                />
+                <label className={styles.fileLabel}>
+                  <input
+                    ref={fotoRef}
+                    id="foto"
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => setFoto(e.target.files?.[0] ?? null)}
+                  />
+                  <span className={styles.fileText}>
+                    {foto ? foto.name : "Seleccionar archivo"}
+                  </span>
+                </label>
               </div>
             </div>
           </div>
