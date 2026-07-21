@@ -158,18 +158,27 @@ export default function DenunciaSection() {
               </div>
               <div className={styles.field}>
                 <label htmlFor="foto">Foto</label>
-                <label className={styles.fileLabel}>
-                  <input
-                    ref={fotoRef}
-                    id="foto"
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => setFoto(e.target.files?.[0] ?? null)}
-                  />
-                  <span className={styles.fileText}>
-                    {foto ? foto.name : "Seleccionar archivo"}
-                  </span>
-                </label>
+                <input
+                  type="text"
+                  placeholder="Subir imagen"
+                  value={foto ? foto.name : ""}
+                  readOnly
+                />
+                <input
+                  ref={fotoRef}
+                  id="foto"
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => setFoto(e.target.files?.[0] ?? null)}
+                  hidden
+                />
+                <button
+                  type="button"
+                  className={styles.uploadBtn}
+                  onClick={() => fotoRef.current?.click()}
+                >
+                  Subir imagen
+                </button>
               </div>
             </div>
           </div>
