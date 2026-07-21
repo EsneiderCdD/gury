@@ -94,48 +94,6 @@
   margin: 4px 0 6px;
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-.btnPrimary {
-  background: #E11D2A;
-  color: #FFFFFF;
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 16px 34px;
-  transition: background 0.2s;
-}
-
-.btnPrimary:hover {
-  background: #b81822;
-}
-
-.btnSecondary {
-  background: transparent;
-  color: #FFFFFF;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 14px 30px;
-  transition: border-color 0.2s;
-}
-
-.btnSecondary:hover {
-  border-color: #FFFFFF;
-}
-
 .scroll {
   position: absolute;
   bottom: 32px;
@@ -219,14 +177,6 @@
   .line {
     width: 24px;
   }
-  .actions {
-    flex-direction: column;
-  }
-  .btnPrimary,
-  .btnSecondary {
-    text-align: center;
-    width: 100%;
-  }
   .content {
     gap: 10px;
   }
@@ -238,11 +188,6 @@
   }
   .subtitle {
     font-size: 15px;
-  }
-  .btnPrimary,
-  .btnSecondary {
-    font-size: 14px;
-    padding: 14px 20px;
   }
   .content {
     padding: 20px 16px;
