@@ -8,10 +8,61 @@
   margin: 0 auto;
 }
 
+.carousel {
+  position: relative;
+}
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.grid > * {
+  scroll-snap-align: start;
+  flex: 0 0 calc((100% - 24px) / 2);
+  min-width: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #E2DCCE;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  color: #0C1A33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.arrow:hover {
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.arrowLeft {
+  left: -16px;
+}
+
+.arrowRight {
+  right: -16px;
 }
 
 .footer {
@@ -38,15 +89,28 @@
   background: #b81822;
 }
 
-@media (max-width: 1250px) {
+@media (min-width: 1001px) {
   .grid {
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    scroll-snap-type: none;
+    gap: 24px;
+  }
+
+  .grid > * {
+    flex: unset;
+    scroll-snap-align: none;
+  }
+
+  .arrow {
+    display: none;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
@@ -60,10 +124,11 @@
   .products {
     padding: 60px 20px;
   }
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+
+  .grid > * {
+    flex: 0 0 100%;
   }
+
   .btn {
     display: block;
     text-align: center;
@@ -71,14 +136,29 @@
     padding: 14px 20px;
     font-size: 14px;
   }
+
+  .arrowLeft {
+    left: -8px;
+  }
+
+  .arrowRight {
+    right: -8px;
+  }
 }
 
 @media (max-width: 450px) {
   .products {
     padding: 48px 16px;
   }
+
   .btn {
     font-size: 13px;
     padding: 12px 16px;
+  }
+
+  .arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
   }
 }
