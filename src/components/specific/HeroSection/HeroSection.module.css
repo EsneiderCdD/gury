@@ -218,13 +218,14 @@
     background-position: 35% center;
   }
   .title {
-    font-size: 28px;
+    font-size: 32px;
   }
   .subtitle {
-    font-size: 15px;
+    font-size: 16px;
   }
   .content {
-    padding: 20px 16px;
+    padding: 24px 16px;
+    gap: 10px;
   }
 }
 
@@ -233,17 +234,17 @@
     background-position: 30% center;
   }
   .title {
-    font-size: 24px;
+    font-size: 28px;
   }
   .subtitle {
-    font-size: 14px;
+    font-size: 15px;
   }
   .role {
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 1.5px;
   }
   .content {
-    padding: 16px 12px;
-    gap: 8px;
+    padding: 20px 12px;
+    gap: 9px;
   }
 }
