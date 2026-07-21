@@ -159,7 +159,7 @@
 
 @media (max-width: 750px) {
   .bg {
-    background-position: 30% center;
+    background-position: 45% center;
   }
   .title {
     font-size: 40px;
@@ -177,6 +177,9 @@
 }
 
 @media (max-width: 600px) {
+  .bg {
+    background-position: 40% center;
+  }
   .title {
     font-size: 34px;
   }
@@ -197,6 +200,9 @@
 }
 
 @media (max-width: 450px) {
+  .bg {
+    background-position: 35% center;
+  }
   .title {
     font-size: 28px;
   }
@@ -209,6 +215,9 @@
 }
 
 @media (max-width: 350px) {
+  .bg {
+    background-position: 30% center;
+  }
   .title {
     font-size: 24px;
   }
