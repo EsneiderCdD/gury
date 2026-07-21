@@ -7,6 +7,13 @@
   overflow: hidden;
 }
 
+@media (max-width: 999px) {
+  .section {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
 .bg {
   position: absolute;
   inset: 0;
@@ -19,6 +26,7 @@
 @media (min-width: 1000px) {
   .bg {
     background-image: url("/hero-refinada.png");
+    background-size: cover;
   }
 }
 
@@ -150,9 +158,6 @@
 }
 
 @media (max-width: 750px) {
-  .section {
-    min-height: 500px;
-  }
   .title {
     font-size: 40px;
   }
