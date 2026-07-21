@@ -4,12 +4,12 @@ import styles from "./QuienSoySection.module.css"
 export default function QuienSoySection() {
   return (
     <div id="quien-soy">
-      <SectionHeader
+      {/* <SectionHeader
         tag="Candidato al Concejo"
         title="Defiendo lo que es nuestro"
         accent="es nuestro"
         subtitle="La seguridad en las calles, el derecho al trabajo y la dignidad de Antioquia. Esa es mi bandera."
-      />
+      /> */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.imageCol}>
@@ -23,8 +23,8 @@ export default function QuienSoySection() {
               <span className={styles.labelText}>Quién soy</span>
             </div>
             <h1 className={styles.title}>
-              Esneider Cadavid
-              <span className={styles.accent}> David</span>
+              Andrés Felipe
+              <span className={styles.accent}> Rodríguez</span>
             </h1>
             <p className={styles.role}>Concejal · Movimiento del Bate</p>
             <div className={styles.bio}>
@@ -47,8 +47,18 @@ export default function QuienSoySection() {
             </div>
             <div className={styles.contact}>
               <span className={styles.contactLabel}>Contacto</span>
-              <a href="mailto:contacto@movimientodelbate.com" className={styles.contactLink}>
-                contacto@movimientodelbate.com
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.instagramLink}
+                aria-label="Instagram"
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
               </a>
             </div>
           </div>
