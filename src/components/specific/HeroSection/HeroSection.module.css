@@ -195,21 +195,21 @@
     background-position: 40% center;
   }
   .title {
-    font-size: 34px;
+    font-size: 38px;
   }
   .role {
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 2px;
   }
   .labelText {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
   }
   .line {
     width: 24px;
   }
   .content {
-    gap: 10px;
+    gap: 12px;
   }
 }
 
