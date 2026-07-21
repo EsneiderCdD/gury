@@ -67,7 +67,7 @@
 .labelText {
   font-family: var(--font-oswald);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #FFD200;
@@ -76,7 +76,7 @@
 .title {
   font-family: var(--font-anton);
   font-weight: 400;
-  font-size: 72px;
+  font-size: 80px;
   line-height: 0.92;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -92,7 +92,7 @@
 .role {
   font-family: var(--font-oswald);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #FFD200;
@@ -101,7 +101,7 @@
 
 .subtitle {
   font-family: var(--font-barlow);
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.55;
   color: #C7D0E0;
   max-width: 540px;
