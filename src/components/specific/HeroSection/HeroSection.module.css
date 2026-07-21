@@ -10,10 +10,16 @@
 .bg {
   position: absolute;
   inset: 0;
-  background-image: url("/hero-refinada.png");
+  background-image: url("/hero-movil.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 1000px) {
+  .bg {
+    background-image: url("/hero-refinada.png");
+  }
 }
 
 .gradient {
