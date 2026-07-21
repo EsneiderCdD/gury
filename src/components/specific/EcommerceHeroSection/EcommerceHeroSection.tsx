@@ -11,7 +11,7 @@ export default function EcommerceHeroSection() {
         tag="Tienda oficial"
         title="Lleva el bate puesto"
         accent="bate"
-        subtitle="Cada compra sostiene la difusión del manifiesto. Envíos a toda Colombia."
+        subtitle="Envíos a toda Colombia."
       />
 
       <div className={styles.products}>
