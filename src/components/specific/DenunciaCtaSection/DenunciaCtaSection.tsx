@@ -6,9 +6,7 @@ export default function DenunciaCtaSection() {
       tag="Denuncia Ciudadana"
       title="¿Fuiste testigo de un acto de vandalismo?"
       accent="vandalismo"
-      subtitle="Tu testimonio es clave para construir el mapa de la verdad en nuestra comunidad. Cada denuncia nos ayuda a visibilizar lo que muchos callan."
-      ctaText="Presentar denuncia"
-      ctaHref="#denuncia-form"
+      subtitle="Tu testimonio es clave para construir el mapa de la verdad en nuestra comunidad. Llena el siguiente formulario para presentar tu denuncia."
     />
   )
 }
